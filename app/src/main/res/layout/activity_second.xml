@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/page2"
     tools:context="com.tips.television_without_internet.SecondActivity">
 
     <Button
@@ -12,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="config my phone "
+        android:background="@drawable/start"
+        android:onClick="but1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865"
-        tools:ignore="HardcodedText"
-        android:onClick="but1"/>
+        app:layout_constraintVertical_bias="0.809"
+        tools:ignore="HardcodedText" />
 </android.support.constraint.ConstraintLayout>

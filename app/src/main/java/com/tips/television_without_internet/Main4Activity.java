@@ -49,7 +49,7 @@ public class Main4Activity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent welcome = new Intent(Main4Activity.this, Main3Activity.class);
+                Intent welcome = new Intent(Main4Activity.this, Main5Activity.class);
                 startActivity(welcome);
                 finish();
             }
