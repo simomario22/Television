@@ -8,11 +8,21 @@ import android.os.Bundle;
 import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.github.lzyzsd.circleprogress.CircleProgress;
 import com.github.lzyzsd.circleprogress.DonutProgress;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Main4Activity extends AppCompatActivity {
+
+    private AdView mAdView;
+
+    //ads interctitiall
+    private InterstitialAd interstitial;
 
     private static int WELCOME_TIMEOUT = 61000;
 
@@ -25,6 +35,32 @@ public class Main4Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+
+        //ads
+
+        MobileAds.initialize(this, "ca-app-pub-1459580878977332~9882513400");
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        // Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(Main4Activity.this);
+
+        // loude
+        interstitial = new InterstitialAd(getApplicationContext());
+        interstitial.setAdUnitId(getString(R.string.admob_interstetial_ad));
+        adRequest = new AdRequest.Builder().build();
+        interstitial.loadAd(adRequest);
+        interstitial.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                if (interstitial.isLoaded()) {
+                    interstitial.show();
+                }
+            }
+        });
+
+
 
         Timer timer;
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>linkMyApp</key>
+        <value>https://play.google.com/store</value>
+    </entry>
+    <entry>
+        <key>MoreApp</key>
+        <value>https://play.google.com/store</value>
+    </entry>
+</defaultsMap>

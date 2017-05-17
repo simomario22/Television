@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "286093220216",
+    "firebase_url": "https://television-without-internet.firebaseio.com",
+    "project_id": "television-without-internet",
+    "storage_bucket": "television-without-internet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286093220216:android:7003fa15b2478aec",
+        "android_client_info": {
+          "package_name": "com.tips.television_without_internet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286093220216-sljpsalplqur5ha41fh34je0btbt8nr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tips.television_without_internet",
+            "certificate_hash": "9269f4cd10d689faa50829933245d390c88bbff9"
+          }
+        },
+        {
+          "client_id": "286093220216-q285so5vc9cjl4jijteg3c58hb1is70a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqqrjDx7vi1zv8qrXEam-dD-Qs0doC5PQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286093220216-q285so5vc9cjl4jijteg3c58hb1is70a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
