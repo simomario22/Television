@@ -1,4 +1,4 @@
-package com.tips.television_without_internet;
+package com.tips.Televisi_tanpa_internet_1;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.tips.television_without_internet", appContext.getPackageName());
+        assertEquals("com.tips.Televisi_tanpa_internet_1", appContext.getPackageName());
     }
 }

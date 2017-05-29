@@ -1,4 +1,4 @@
-package com.tips.television_without_internet;
+package com.tips.Televisi_tanpa_internet_1;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,17 +11,19 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
-public class Main3Activity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     private AdView mAdView;
+
     //ads interctitiall
     private InterstitialAd interstitial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-        //ads
+        setContentView(R.layout.activity_second);
+
+        //ads b
 
         MobileAds.initialize(this, "ca-app-pub-1459580878977332~9882513400");
 
@@ -30,7 +32,7 @@ public class Main3Activity extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(Main3Activity.this);
+        interstitial = new InterstitialAd(SecondActivity.this);
 
         // loude
         interstitial = new InterstitialAd(getApplicationContext());
@@ -45,11 +47,13 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
+
     }
 
-    public void but2(View view) {
+    public void but1(View view) {
 
-        Intent i = new Intent(this, Main4Activity.class);
+
+        Intent i = new Intent(this, Main2Activity.class);
         startActivity(i);
     }
 }

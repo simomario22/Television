@@ -1,4 +1,4 @@
-package com.tips.television_without_internet;
+package com.tips.Televisi_tanpa_internet_1;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -8,37 +8,28 @@ import android.os.Bundle;
 import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.github.lzyzsd.circleprogress.CircleProgress;
 import com.github.lzyzsd.circleprogress.DonutProgress;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Main2Activity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-
-    private static int WELCOME_TIMEOUT = 41000;
+    private static int WELCOME_TIMEOUT = 11000;
 
     private Timer timer;
     private DonutProgress donutProgress;
     private CircleProgress circleProgress;
     private ArcProgress arcProgress;
 
-    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
 
-        //ads
 
-        MobileAds.initialize(this, "ca-app-pub-1459580878977332~9882513400");
 
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         Timer timer;
 
@@ -56,18 +47,18 @@ public class Main2Activity extends AppCompatActivity {
                     }
                 });
             }
-        }, 1000, 400);
+        }, 1000, 100);
 
 
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent welcome = new Intent(Main2Activity.this, Main3Activity.class);
+                Intent welcome = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(welcome);
                 finish();
             }
         },WELCOME_TIMEOUT);
-
     }
+
 }
