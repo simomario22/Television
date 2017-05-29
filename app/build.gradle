@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.tips.television_without_internet"
+        applicationId "com.tips.Televisi_tanpa_internet_1"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1

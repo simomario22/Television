@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/page5"
-    tools:context="com.tips.television_without_internet.Main4Activity">
+    tools:context="com.tips.Televisi_tanpa_internet_1.Main4Activity">
 
 
     <com.github.lzyzsd.circleprogress.DonutProgress
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="LARGE_BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:adUnitId="ca-app-pub-1459580878977332/7199745401"
         ads:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="8dp"

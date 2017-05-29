@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tips.television_without_internet">
+    package="com.tips.Televisi_tanpa_internet_1">
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
@@ -12,18 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.tips.Televisi_tanpa_internet_1.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".Main4Activity" />
-        <activity android:name=".Main5Activity"></activity>
+        <activity android:name="com.tips.Televisi_tanpa_internet_1.SecondActivity" />
+        <activity android:name="com.tips.Televisi_tanpa_internet_1.Main2Activity" />
+        <activity android:name="com.tips.Televisi_tanpa_internet_1.Main3Activity" />
+        <activity android:name="com.tips.Televisi_tanpa_internet_1.Main4Activity" />
+        <activity android:name="com.tips.Televisi_tanpa_internet_1.Main5Activity"></activity>
     </application>
 
 </manifest>

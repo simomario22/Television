@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/page1"
-    tools:context="com.tips.television_without_internet.MainActivity">
+    tools:context="com.tips.Televisi_tanpa_internet_1.MainActivity">
 
     <com.github.lzyzsd.circleprogress.DonutProgress
         android:id="@+id/donut_progress"
