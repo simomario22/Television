@@ -18,7 +18,7 @@ import java.util.TimerTask;
 public class Main2Activity extends AppCompatActivity {
 
 
-    private static int WELCOME_TIMEOUT = 41000;
+    private static int WELCOME_TIMEOUT = 8000;
 
     private Timer timer;
     private DonutProgress donutProgress;
@@ -56,7 +56,7 @@ public class Main2Activity extends AppCompatActivity {
                     }
                 });
             }
-        }, 1000, 400);
+        }, 1000, 70);
 
 
 

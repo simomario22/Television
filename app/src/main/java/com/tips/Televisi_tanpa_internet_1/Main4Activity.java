@@ -21,10 +21,9 @@ public class Main4Activity extends AppCompatActivity {
 
     private AdView mAdView;
 
-    //ads interctitiall
-    private InterstitialAd interstitial;
 
-    private static int WELCOME_TIMEOUT = 61000;
+
+    private static int WELCOME_TIMEOUT = 11000;
 
     private Timer timer;
     private DonutProgress donutProgress;
@@ -44,21 +43,7 @@ public class Main4Activity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(Main4Activity.this);
 
-        // loude
-        interstitial = new InterstitialAd(getApplicationContext());
-        interstitial.setAdUnitId(getString(R.string.admob_interstetial_ad));
-        adRequest = new AdRequest.Builder().build();
-        interstitial.loadAd(adRequest);
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-                if (interstitial.isLoaded()) {
-                    interstitial.show();
-                }
-            }
-        });
 
 
 
@@ -78,7 +63,7 @@ public class Main4Activity extends AppCompatActivity {
                     }
                 });
             }
-        }, 1000, 600);
+        }, 1000, 100);
 
 
 
@@ -87,6 +72,7 @@ public class Main4Activity extends AppCompatActivity {
             public void run() {
                 Intent welcome = new Intent(Main4Activity.this, Main5Activity.class);
                 startActivity(welcome);
+
                 finish();
             }
         },WELCOME_TIMEOUT);

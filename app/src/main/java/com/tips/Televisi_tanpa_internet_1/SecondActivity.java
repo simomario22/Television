@@ -39,13 +39,7 @@ public class SecondActivity extends AppCompatActivity {
         interstitial.setAdUnitId(getString(R.string.admob_interstetial_ad));
         adRequest = new AdRequest.Builder().build();
         interstitial.loadAd(adRequest);
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-                if (interstitial.isLoaded()) {
-                    interstitial.show();
-                }
-            }
-        });
+
 
 
     }
@@ -55,5 +49,9 @@ public class SecondActivity extends AppCompatActivity {
 
         Intent i = new Intent(this, Main2Activity.class);
         startActivity(i);
+
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
     }
 }

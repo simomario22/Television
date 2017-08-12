@@ -18,14 +18,11 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 
 public class Main5Activity extends AppCompatActivity {
 
-    // fire
 
-    public FirebaseRemoteConfig mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
 
     private AdView mAdView;
 
-    //ads interctitiall
-    private InterstitialAd interstitial;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,42 +37,9 @@ public class Main5Activity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(Main5Activity.this);
-
-        // loude
-        interstitial = new InterstitialAd(getApplicationContext());
-        interstitial.setAdUnitId(getString(R.string.admob_interstetial_ad));
-        adRequest = new AdRequest.Builder().build();
-        interstitial.loadAd(adRequest);
-        interstitial.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-                if (interstitial.isLoaded()) {
-                    interstitial.show();
-                }
-            }
-        });
-
-        // remot config
 
 
-        mFirebaseRemoteConfig.setDefaults(R.xml.remote_config_defaults);
-        long cacheExpiration = 0; //1 hour = 3600 in seconds
-        if(mFirebaseRemoteConfig.getInfo().getConfigSettings().isDeveloperModeEnabled())
-        {
-            cacheExpiration = 0;
-        }
-        mFirebaseRemoteConfig.fetch(cacheExpiration)
-                .addOnCompleteListener(new OnCompleteListener<Void>(){
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task){
-                        if(task.isSuccessful()){
-                            mFirebaseRemoteConfig.activateFetched();
-                        } else {
 
-                        }
-                    }
-                });
 
 
     }
@@ -85,7 +49,7 @@ public class Main5Activity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse(mFirebaseRemoteConfig.getString("linkMyApp")));
+        intent.setData(Uri.parse("https://www.facebook.com/"));
         startActivity(intent);
 
 
